@@ -1,0 +1,59 @@
+{
+  "name": "PaymentPlayground",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "PaymentPlayground",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/PaymentPlayground"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "PaymentPlayground"
+        },
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nx/next:server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "PaymentPlayground:build",
+        "dev": true,
+        "port": 4201
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "PaymentPlayground:build:development",
+          "dev": true
+        },
+        "production": {
+          "buildTarget": "PaymentPlayground:build:production",
+          "dev": false
+        }
+      }
+    },
+    "export": {
+      "executor": "@nx/next:export",
+      "options": {
+        "buildTarget": "PaymentPlayground:build:production"
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "PaymentPlayground/jest.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    }
+  },
+  "tags": []
+}
