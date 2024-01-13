@@ -2,7 +2,7 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0.101 AS build-env
 
 # install node 20.9.0
-ENV NODE_VERSION=20.0.9
+ENV NODE_VERSION=20.9.0
 RUN apt install -y curl
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 ENV NVM_DIR=/root/.nvm
