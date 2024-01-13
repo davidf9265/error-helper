@@ -4,9 +4,10 @@
   "license": "MIT",
   "scripts": {
     "payment": "nx run PaymentPlayground:serve",
+    "error-api": "nx run errors-api:serve",
     "prepare": "nx g @nx-dotnet/core:restore",
     "build-error-api": "nx build errors-api",
-    "start-error-api": "nx serve errors-api",
+    "start-error-api": "nx serve errors-api --prod",
     "start-playground": "nx serve PaymentPlayground --prod",
     "build-playground": "nx build PaymentPlayground"
   },

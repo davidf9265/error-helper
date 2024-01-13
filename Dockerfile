@@ -30,7 +30,7 @@ ENV APP_NAME errors-api
 
 # Check the value of the APP_NAME environment variable and run the corresponding command
 CMD if [ "$APP_NAME" = "errors-api" ]; then \
-    npm run start-errors-api; \
+    npm run start-error-api; \
     elif [ "$APP_NAME" = "PaymentPlayground" ]; then \
     npm run start-payment-playground; \
     else \
