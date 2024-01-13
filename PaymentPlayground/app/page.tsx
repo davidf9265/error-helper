@@ -14,7 +14,7 @@ export default async function Index() {
         <div className="inset-0 h-full">
           {/* <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10"> */}
           <div className="pointer-events-none inset-y-0 right-0 flex flex-direction-row max-w-full h-full justify-end">
-            <div className="pointer-events-auto min-h-full w-1/2 bg-red-500">
+            <div className="pointer-events-auto min-h-full w-1/2">
               <div className="left-0 top-0 ml-8 flex pr-2 pt-4 sm:-ml-10 sm:pr-4">
                 <button
                   type="button"
