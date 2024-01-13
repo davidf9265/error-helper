@@ -7,7 +7,7 @@
     "prepare": "nx g @nx-dotnet/core:restore",
     "build-error-api": "nx build errors-api",
     "start-error-api": "nx serve errors-api",
-    "start-playground": "nx serve PaymentPlayground --prod",
+    "start-playground": "nx serve PaymentPlayground --prod --port $PORT",
     "build-playground": "nx build PaymentPlayground"
   },
   "private": true,
