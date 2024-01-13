@@ -32,8 +32,8 @@ ENV APP_NAME PaymentPlayground
 CMD if [ "$APP_NAME" = "errors-api" ]; then \
     npm run start-errors-api; \
     elif [ "$APP_NAME" = "PaymentPlayground" ]; then \
-    npm run build-playground; then \
-    npm run start-playground;   \
+    npm run build-playground; \
+    npm run start-playground; \
     else \
     echo "Invalid APP_NAME specified"; \
     exit 1; \
