@@ -1,0 +1,6 @@
+@ErrorHelper.ErrorsApi_HostAddress = http://localhost:5047
+
+GET {{ErrorHelper.ErrorsApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

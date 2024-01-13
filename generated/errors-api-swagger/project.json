@@ -1,0 +1,19 @@
+{
+  "name": "errors-api-swagger",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "targets": {
+    "build": {
+      "executor": "nx:noop",
+      "outputs": ["generated/errors-api-swagger"]
+    },
+    "codegen": {
+      "executor": "@nx-dotnet/core:openapi-codegen",
+      "options": {
+        "openapiJsonPath": "generated/errors-api-swagger/swagger.json",
+        "outputProject": "generated-errors-api-types"
+      },
+      "dependsOn": ["^swagger"]
+    }
+  },
+  "implicitDependencies": ["errors-api"]
+}

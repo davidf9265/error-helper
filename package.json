@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "payment": "nx run PaymentPlayground:serve"
+    "payment": "nx run PaymentPlayground:serve",
+    "prepare": "nx g @nx-dotnet/core:restore"
   },
   "private": true,
   "dependencies": {
@@ -14,6 +15,7 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
+    "@nx-dotnet/core": "^2.1.2",
     "@nx/cypress": "17.2.8",
     "@nx/eslint": "17.2.8",
     "@nx/eslint-plugin": "17.2.8",

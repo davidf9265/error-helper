@@ -1,0 +1,32 @@
+{
+  "name": "errors-api-test",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "errors-api-test",
+  "targets": {
+    "build": {
+      "executor": "@nx-dotnet/core:build",
+      "outputs": [
+        "{workspaceRoot}/dist/errors-api-test",
+        "{workspaceRoot}/dist/intermediates/errors-api-test"
+      ],
+      "options": {
+        "configuration": "Debug",
+        "noDependencies": true
+      },
+      "configurations": {
+        "production": {
+          "configuration": "Release"
+        }
+      }
+    },
+    "test": {
+      "executor": "@nx-dotnet/core:test",
+      "options": {}
+    },
+    "lint": {
+      "executor": "@nx-dotnet/core:format"
+    }
+  },
+  "tags": []
+}

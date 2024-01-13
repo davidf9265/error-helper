@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@error-helper/generated/errors-api-types": [
+        "generated/errors-api-types/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

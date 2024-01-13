@@ -1,0 +1,31 @@
+{
+  "name": "generated-errors-api-types",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "generated/errors-api-types/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/generated/errors-api-types",
+        "main": "generated/errors-api-types/src/index.ts",
+        "tsConfig": "generated/errors-api-types/tsconfig.lib.json",
+        "assets": ["generated/errors-api-types/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "generated/errors-api-types/jest.config.ts"
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["errors-api-swagger"]
+}

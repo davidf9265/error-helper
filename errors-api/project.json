@@ -1,0 +1,47 @@
+{
+  "name": "errors-api",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "errors-api",
+  "targets": {
+    "build": {
+      "executor": "@nx-dotnet/core:build",
+      "outputs": [
+        "{workspaceRoot}/dist/errors-api",
+        "{workspaceRoot}/dist/intermediates/errors-api"
+      ],
+      "options": {
+        "configuration": "Debug",
+        "noDependencies": true
+      },
+      "configurations": {
+        "production": {
+          "configuration": "Release"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx-dotnet/core:serve",
+      "options": {
+        "configuration": "Debug"
+      },
+      "configurations": {
+        "production": {
+          "configuration": "Release"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx-dotnet/core:format"
+    },
+    "swagger": {
+      "executor": "@nx-dotnet/core:update-swagger",
+      "outputs": ["{workspaceRoot}/generated/errors-api-swagger/swagger.json"],
+      "options": {
+        "output": "generated/errors-api-swagger/swagger.json"
+      },
+      "dependsOn": ["build"]
+    }
+  },
+  "tags": []
+}
